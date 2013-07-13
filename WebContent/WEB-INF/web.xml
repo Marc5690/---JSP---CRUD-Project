@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ControllerServlet</display-name>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>ie.dwd.servlets.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateServlet</display-name>
+    <servlet-name>CreateServlet</servlet-name>
+    <servlet-class>ie.dwd.servlets.CreateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateServlet</servlet-name>
+    <url-pattern>/CreateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteServlet</display-name>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>ie.dwd.servlets.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveServlet</display-name>
+    <servlet-name>RetrieveServlet</servlet-name>
+    <servlet-class>ie.dwd.servlets.RetrieveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveServlet</servlet-name>
+    <url-pattern>/RetrieveServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateServlet</display-name>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>ie.dwd.servlets.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidateLoginDetails</display-name>
+    <servlet-name>ValidateLoginDetails</servlet-name>
+    <servlet-class>ie.ds.wit.ValidateLoginDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateLoginDetails</servlet-name>
+    <url-pattern>/validate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidateRegistrationDetails</display-name>
+    <servlet-name>ValidateRegistrationDetails</servlet-name>
+    <servlet-class>ie.ds.wit.ValidateRegistrationDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateRegistrationDetails</servlet-name>
+    <url-pattern>/validateRegistration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowStoredData</display-name>
+    <servlet-name>ShowStoredData</servlet-name>
+    <servlet-class>ie.ds.wit.ShowStoredData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowStoredData</servlet-name>
+    <url-pattern>/show</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TopTen</display-name>
+    <servlet-name>TopTen</servlet-name>
+    <servlet-class>ie.dwd.servlets.TopTen</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TopTen</servlet-name>
+    <url-pattern>/ten</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>logout</display-name>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>ie.dwd.servlets.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Web Resource</servlet-name>
+    <servlet-class>
+com.sun.jersey.spi.container.servlet.ServletContainer
+</servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>ie.web</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Web Resource</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Web</display-name>
+    <servlet-name>Web</servlet-name>
+    <servlet-class>ie.web.Web</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Web</servlet-name>
+    <url-pattern>/web</url-pattern>
+  </servlet-mapping>
+</web-app>
